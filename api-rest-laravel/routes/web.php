@@ -21,8 +21,21 @@ Route::get('/', function () {
 // El nombre del controlador y el nombre de la función que tiene que ejecutar
 //Ruta de prueba
 Route::get('/test-orn', 'PruebasController@testOrm');
-
-//Ruta de la API
 Route::get('/usuario/pruebas', 'UserController@pruebas');
 Route::get('/categorias/pruebas', 'CategoryController@pruebas');
 Route::get('/post/pruebas', 'PostController@pruebas');
+
+//Rutas de la API
+/*
+    Metodos http comunes:
+        - GET --> Conseguir datos o recursos
+        - POST --> Guardar datos o recursos
+        - PUT --> Actualizar recursos o datos
+        - DELETE --> Eliminar datos o recursos
+*/
+Route::post('/api/register', 'UserController@register');
+Route::post('/api/login', 'UserController@login');
+
+
+
+
