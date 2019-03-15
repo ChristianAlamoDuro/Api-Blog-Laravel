@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Le indicamos la ruta y en este caso como es un controlador le indicamos
+// El nombre del controlador y el nombre de la función que tiene que ejecutar
 Route::get('/test-orn', 'PruebasController@testOrm');
