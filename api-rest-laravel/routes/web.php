@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,14 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pruebas/{nombre}',function($nombre){
-    $texto = 'hola soy routa '. $nombre;
-    return view('prueba', array(
-        'texto' => $texto
-    ));
-});
-
-Route::get('/animales', 'PruebasController@index');
-
 Route::get('/test-orn', 'PruebasController@testOrm');
-

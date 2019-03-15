@@ -3,21 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// Importamos los modelos
 use App\Post;
 use App\Category;
-
 class PruebasController extends Controller
 {
-    public function index()
-    {
-        $titulo = 'animales';
-        $animales = ['perro', 'gato', 'tigre'];
-        return view('pruebas.index', array(
-            'animales' => $animales,
-            'titulo' => $titulo
-        )); // Es una carpeta pruebas que contiene un index
-    }
-
     public function testOrm()
     {
         /*
@@ -32,10 +22,10 @@ class PruebasController extends Controller
         $categories = Category::all();
         echo 'Todos los post de todas las categorias';
         foreach ($categories as $category) {
-            echo '<h1>'. $category->name . '</h1> <hr>';
+            echo '<h1>' . $category->name . '</h1> <hr>';
             foreach ($category->posts as $post) {
-                echo '<h2>'. $post->title . '</h2>';
-                echo '<p>'. $post->content . '</p>';
+                echo '<h2>' . $post->title . '</h2>';
+                echo '<p>' . $post->content . '</p>';
             }
         }
         die();

@@ -15,7 +15,6 @@ class User extends Authenticatable
      *
      * @var array
      */
-
     // Datos que se pueden rellenar al hacer un insert , un update...
     protected $fillable = [
         'name', 'surnamae', 'description', 'email', 'password',
