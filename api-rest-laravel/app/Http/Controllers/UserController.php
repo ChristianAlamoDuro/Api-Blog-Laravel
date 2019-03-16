@@ -98,4 +98,5 @@ class UserController extends Controller
     {
         $jwtAuth = new \JwtAuth();
         return $jwtAuth->signUp();
+    }
 }
