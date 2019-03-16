@@ -96,6 +96,6 @@ class UserController extends Controller
     // Login usuario
     public function login(Request $request)
     {
-        return 'Accion de pruebas de USER LOG';
-    }
+        $jwtAuth = new \JwtAuth();
+        return $jwtAuth->signUp();
 }
