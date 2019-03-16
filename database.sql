@@ -10,8 +10,8 @@ CREATE TABLE users(
     password            varchar(255) not null,
     description         text,
     image               varchar(255),
-    create_at           datetime DEFAULT NULL,
-    update_at           datetime DEFAULT NULL,
+    created_at           datetime DEFAULT NULL,
+    updated_at           datetime DEFAULT NULL,
     remember_token      varchar(255),
     CONSTRAINT pk_users PRIMARY KEY (id)
 )ENGINE=InnoDb;
@@ -19,8 +19,8 @@ CREATE TABLE users(
 CREATE TABLE categories(
     id                  int(255) auto_increment not null,
     name                varchar(100),    
-    create_at           datetime DEFAULT NULL,
-    update_at           datetime DEFAULT NULL,
+    created_at           datetime DEFAULT NULL,
+    updated_at           datetime DEFAULT NULL,
     CONSTRAINT pk_categories PRIMARY KEY (id)
 )ENGINE=InnoDb;
 
@@ -31,8 +31,8 @@ CREATE TABLE posts(
     title               varchar(255) not null,
     content             text not null,
     image               varchar(255),
-    create_at           datetime DEFAULT NULL,
-    update_at           datetime DEFAULT NULL,
+    created_at           datetime DEFAULT NULL,
+    updated_at           datetime DEFAULT NULL,
     CONSTRAINT pk_posts PRIMARY KEY (id),
     CONSTRAINT fk_post_user FOREIGN KEY (user_id) REFERENCES users(id),
     CONSTRAINT fk_post_category FOREIGN KEY (category_id) REFERENCES categories(id)
